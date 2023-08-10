@@ -1,0 +1,22 @@
+//Q4: Give the example for currying and pure function
+
+
+package com.globlallogic.q3
+
+object higherorderfunction extends App {
+  def totalmul(a: Int, b: Int) = a+b
+  def totalsum(a: Int)( b: Int) = a*b
+
+
+
+
+  val sum = totalsum(3) _
+  val sumresult=sum(2)
+  val mul = totalmul(3,4)
+  println(s"The sum is $sumresult")
+  println(s"The sum is $mul")
+
+}
+
+
+

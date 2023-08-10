@@ -1,0 +1,46 @@
+Q1: Give example , how do we handle exceptions in different ways?
+
+
+//with capital Try
+import scala.Console.println
+import scala.util.Try
+
+object Main extends App {
+  val l = 3
+  val b = 0
+  val result = Try {
+    val a = l / b
+    a
+  }
+
+  result match {
+    case scala.util.Success(a) => println(s"Result: $a")
+    case scala.util.Failure(exception) => println(s"Error: ${exception.getMessage}")
+  }
+}
+
+// with small try
+
+import main.a
+
+import scala.Console.println
+import scala.util.Try
+
+object Main extends App {
+  val l = 3
+  val b = 3
+  try {
+    val a = l / b
+    println(s"Result: $a")
+
+  }
+
+  catch {
+    case exception: ArithmeticException=> println(s"arthmatic exception: $a")
+    case exception: Throwable=>  println("throwabnle exception")
+    case exception: RuntimeException => println("runtime exception")
+    case _ =>println("unknown")
+
+  }
+}
+

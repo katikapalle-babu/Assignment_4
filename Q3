@@ -1,0 +1,17 @@
+
+//Q3: Write a function to find the sum of element from a list using higher order function
+
+
+package com.globlallogic.q3
+
+object higherorderfunction extends App {
+  def totalsum(list: List[Int]) = {
+    list.foldLeft(0)(_+_)
+    list.reduce((a,b)=>a+b)
+  }
+val list=List(1,2,3,4,5)
+  val result=totalsum(list)
+  println(s"The sum of elements in the list is: $result")
+}
+
+

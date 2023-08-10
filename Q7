@@ -1,0 +1,24 @@
+//Q7: print the element of the list using map and flatMap yield of below list
+ //  List(List(1,2,3,4),List(3,4,5), Nil, List(11,34,6))
+
+
+object higherorderfunction extends App {
+  val list = List(List(1, 2, 3, 4), List(3, 4, 5), Nil, List(11, 34, 6))
+
+  // Using map and foreach
+  println("Using map:")
+  list.map(_.foreach(println))
+
+  // Using flatMap and foreach
+  println("Using flatMap and yield:")
+  val result = list.flatMap {
+    innerList => innerList.map {
+      element => s"Element: $element"
+    }
+  }
+
+  result.foreach(println)
+  }
+
+
+

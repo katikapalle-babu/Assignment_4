@@ -1,0 +1,21 @@
+//Q5: How do we define the default value of a parameter in the function with example
+
+
+package com.globlallogic.q3
+
+object higherorderfunction extends App {
+  def totalsum(a: Int, b: Int=5) = a+b
+  val sum = totalsum(3)
+  println(s"The sum is $sum")
+
+  def hello(name:String="shobhan") = {
+    println(s"nameis:$name")
+  }
+ hello()
+  hello("shobhanbabu")
+
+
+}
+
+
+

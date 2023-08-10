@@ -1,0 +1,22 @@
+//Q2: create a service and give example how do we defined the package and how can we use some class/method in other package
+//client
+package com.globallogic.client
+class variables {
+
+    println("Hello world!")
+
+    def sum(a: Int, b: Int): Int = a + b
+
+  }
+
+//service
+package com.globallogic.service
+
+import com.globallogic.client.variables
+
+object result extends App {
+  val r=new variables()
+  val total=r.sum(3,5)
+  println(s"result:$total")
+
+}
